@@ -48,6 +48,43 @@ from some sort of persistent data source which will also accessed statically bui
 ```
 <?php
 
+namespace App\Http\Controllers;
+
+use App\User;
+use App\Http\Controllers\Controller;
+use Illuminate\Contracts\View\Factory;
+use App\Users\Repository as UserRepository;
+
+class UserController extends Controller
+{
+    private $users;
+    private $views;
+
+    public function __construct(UserRepository $users, ViewFactory $views)
+    {
+        $this->users = $users;
+        $this->views = $views;
+    }
+
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function showProfile($id)
+    {
+        return $this->views->make('user.profile', ['user' => $this->users->findOrFail($id)]);
+    }
+}
+```
+
+This is an improved version of the above example, the two key dependencies have been injected to the controller making it
+explicit which external classes the controller calls upon to perform it's function.
+
+```
+<?php
+
 namespace Blog\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
@@ -101,23 +138,31 @@ Above is another example, from the same framework as the previous example, this 
 in the constructor making it explicit and far easier to trace.
 
 From the trivial examples here it can be hard to see the benefits, however in a longer method which handles input processing,
-fetching or saving of data and conditional redirect logic, dependencies in the form of the first and second examples can
+fetching or saving of data and conditional redirect logic, dependencies in the form of the first and third examples can
 be hard to keep track of or spot amongst the logic of the application code. Mixing different types of logic (presentation
 and wiring logic in our case) in the same class will eventually lead to problems once the software becomes complex.
 
 ## Conclusion
 
 The code above is a symptom of rapid application development practices, it may seem attractive (especially to the business side)
-to be able to develop systems quickly, however this is a price which will almost always have to be paid back further down
+to be able to develop systems quickly, however this is a price which will eventually¹ have to be paid back further down
 the line in increased maintenance costs. Blurring boundaries between dependencies speeds development, but harms future
 development as you untangle the spiders web. On the other hand following a stricter approach to dependencies may take
 longer to start with as you have to write additional factory classes, however the benefits are realised further down the
 line as the barrier to change is lowered.
 
+***
+
 ### Credits
 
 Example 1 comes from the [Laravel documentation](http://laravel.com/docs/5.1/controllers)
 
-Example 3 comes from the [Zend framework documentation](http://framework.zend.com/manual/current/en/in-depth-guide/services-and-servicemanager.html)
+Example 2 was provided by Taylor Otwell https://gist.github.com/taylorotwell/c346b682e1d943d3083b
 
-Both are reproduced here to provide context to my critique of certain development practices.
+Example 4 comes from the [Zend framework documentation](http://framework.zend.com/manual/current/en/in-depth-guide/services-and-servicemanager.html)
+
+All examples are reproduced here to provide context to my critique of certain development practices.
+
+### Footnotes
+
+¹ Eventually may never occur if you: a) rarely change code once deployed or b) Have a system with low levels of complexity
