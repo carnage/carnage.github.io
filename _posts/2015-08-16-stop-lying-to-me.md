@@ -7,12 +7,16 @@ comments: false
 
 ## Lies, damned lies and hidden dependencies
 
+<!--excerpt-start-->
+
 As a developer, one of the things which consistently annoys me is hidden/none obvious dependencies. There are a number
 of reasons this annoys, me for starters it can really slow down writing tests [(for example)](http://misko.hevery.com/2008/08/17/singletons-are-pathological-liars/)
 when you have to manually trace through an object graph to figure out what you need to mock out. This need for manual
 tracing also impairs cognitive understanding increasing the time it takes to understand what is happening and quite often
 prevents your expensive IDE from helping you out. Code with hidden dependencies also has a high resistance to change with
 unintended consequences to minor edits popping up in seemingly unrelated areas.
+
+<!--excerpt-end-->
 
 ## Some examples
 

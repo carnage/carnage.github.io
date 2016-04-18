@@ -5,12 +5,16 @@ date: 2015-08-03 10:00:00 +100
 comments: false
 ---
 
-## Introduction 
+## Introduction
+
+<!--excerpt-start-->
 
 Hashids is a multi language library which converts integers into strings. Although the site http://hashids.org/ makes no
 claims of being secure, the language used (words like hash and salt) within the code and documentation implies security.
 In this post, I explore just how bad it is from a security perspective in the hope that anyone reading this will avoid
 using it in a security context.
+
+<!--excerpt-end-->
 
 Wikipedia defines the ideal hash function as having three main properties:
 
@@ -27,6 +31,9 @@ attacker being able to 1) determine the real value of the id and 2) be able to m
 function to produce a desired value. Essentially this means that property 2 of an ideal hash function needs to hold for
 decoding a hashid. Clearly if you have access to the salt, it is trivial to calculate the function in either direction 
 so the basis for proving or disproving property 2 lies in how easy it is for an attacker to discover the secret salt.
+
+
+
 
 ## The algorithm
 

@@ -6,9 +6,13 @@ comments: false
 ---
 ## The 6 rules of password storage
 
+<!--excerpt-start-->
+
 This post is a quick writeup of the reasons behind password storage techniques, so I can refer to it instead of
 explaining a fresh every time. It is intended to be simple and easy so there is no excuse for not reading or
 understanding it.
+
+<!--excerpt-end-->
 
 0. We **must** protect passwords not just for our own services security but for the security of all internet services.
 Users reuse passwords, in an ever connected internet, the value of a password is ever increasing.
