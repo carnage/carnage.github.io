@@ -16,6 +16,9 @@ layout: default
                 {{ post.content }}
             {% endif %}
         </div>
+        {% if post.content contains '<!--excerpt-end-->' %}
+        <a href="{{ site.baseurl}}{{ post.url }}">There's more...</a>
+        {% endif %}
     </div>
 </div>
 {% endfor %}
