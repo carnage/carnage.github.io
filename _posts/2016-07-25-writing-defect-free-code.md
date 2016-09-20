@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Writing bug free code"
+title: "Writing defect free code"
 date: 2016-07-25 10:00:00 +100
 comments: false
 ---
 
-## Writing bug free code
+## Writing defect free code
 
 <!--excerpt-start-->
 
@@ -414,6 +414,15 @@ figure out the function is greatly reduced.
 
 As an added bonus, putting type hints into your code allows your IDE to autocomplete much more
 effectively - speeding up your development and reducing errors from typos in function names.
+
+#### Encapsulate knowledge inside classes
+
+Probably the best weapon we have in helping developers who interact with our code later on is to reduce
+the cognitive burden on them for getting something done. The less of your code they have to read and
+understand to complete their task the better.
+
+When you wrote the code, you gained a lot of knowledge about the specific problem you were solving. This
+knowledge is not something that another developer who is working on the code necessarily has
 
 #### The 80/20 rule
 
