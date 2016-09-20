@@ -422,7 +422,42 @@ the cognitive burden on them for getting something done. The less of your code t
 understand to complete their task the better.
 
 When you wrote the code, you gained a lot of knowledge about the specific problem you were solving. This
-knowledge is not something that another developer who is working on the code necessarily has
+knowledge is not something that another developer who is working on the code necessarily has. Consider this example
+
+```
+class BankAccount
+{
+    public static function create(ValidatorInterface $validator, string $sortCode, string $accountNumber)
+    {
+        //...
+    }
+}
+```
+
+This is reasonably clear code, but still requires a developer to obtain knowledge about what a validator is and how to
+set one up, even if they are already aware (through domain knowledge) about what a sort code and account number are. We
+could encapsulate this information inside another class, for example a factory class like so:
+
+```
+class BankAccountFactory
+{
+    public function __construct($serviceLocator)
+    {
+        //...
+    }
+
+    public function createBankAccount(string $sortCode, string$accountNumber)
+    {
+        return BankAccount::create($this->serviceLocator->get('bankAccountValidator'), $sortCode, $accountNumber);
+    }
+}
+```
+
+You have reduced the amount of knowledge a developer coming after you has to learn before they can successfully create
+a valid bank account object. In the example above, it was as simple as grabbing something from a service locator, but
+if there was lots of config required eg locations of data files or API endpoints to use, hiding this complexity away
+inside another class will really help people coming after you to use your code the way you intended and allow them to
+leverage your knowledge without having to learn it all themselves.
 
 #### The 80/20 rule
 
