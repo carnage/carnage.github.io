@@ -427,7 +427,7 @@ knowledge is not something that another developer who is working on the code nec
 ```
 class BankAccount
 {
-    public static function create(ValidatorInterface $validator, string $sortCode, string $accountNumber)
+    public static function create(Validator $validator, string $sortCode, string $accountNumber)
     {
         //...
     }
@@ -446,9 +446,10 @@ class BankAccountFactory
         //...
     }
 
-    public function createBankAccount(string $sortCode, string$accountNumber)
+    public function createBankAccount(string $sortCode, string $accountNumber)
     {
-        return BankAccount::create($this->serviceLocator->get('bankAccountValidator'), $sortCode, $accountNumber);
+        $validator = $this->serviceLocator->get('bankAccountValidator');
+        return BankAccount::create($validator, $sortCode, $accountNumber);
     }
 }
 ```
