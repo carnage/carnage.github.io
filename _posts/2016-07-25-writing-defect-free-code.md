@@ -39,7 +39,8 @@ using it to it's fullest.
 #### Write code which reduces the possible number of invalid states
 Consider these two functions:
 
-```
+```php
+<?php
 function doFoo(bool $isBar, bool $isBaz)
 {
     if ($isBar && $isBaz) {
@@ -56,7 +57,8 @@ function doFoo(bool $isBar, bool $isBaz)
 
 VS
 
-```
+```php
+<?php
 define('MODE_BAZ', 'baz');
 define('MODE_BAR', 'bar');
 
@@ -93,7 +95,8 @@ would become invalid.
 
 Consider:
 
-```
+```php
+<?php
 class DateRange
 {
     private $start;
@@ -118,7 +121,8 @@ class DateRange
 
 VS
 
-```
+```php
+<?php
 class DateRange
 {
     private $start;
@@ -192,7 +196,8 @@ This guideline is more of a 50/50 use case, as quite often you want a getter to 
 interact with. This is especially true in service classes and factories, but in other situations such as
 entities it can be dangerous and lead to hard to diagnose data loss causing defects. Consider:
 
-```
+```php
+<?php
 class UserEntity
 {
     private $joinDate;
@@ -237,7 +242,8 @@ or we could clone the joinDate before returning it or we could return a DateTime
 createFromMutable (PHP 5.6+) method on it. However an even better way would be not to expose the raw
 datetime object at all:
 
-```
+```php
+<?php
 class UserEntity
 {
     private $joinDate;
@@ -283,21 +289,23 @@ probably name it calculateAndUpdateBalance and that is a bit of a mouthful.
 
 As an example consider the PHP iterator interface:
 
-```
+```php
+<?php
 interface Iterator
 {
     public function key();
     public function current();
     public function valid();
     public function next();
-
+    public function rewind();
 }
 ```
 
 This interface conforms with this guideline key, current and valid answer questions about the state of
 the iterator. Next and rewind change it's state. Imagine if instead, we had the following interface:
 
-```
+```php
+<?php
 interface Iterator
 {
     public function current();
@@ -325,7 +333,8 @@ Any developer trying to review your code or understand it to make modifications 
 code, parse it and ignore it. This reduces their focus on the important code which is doing the work.
 Consider the examples below (from a semi real world scenario).
 
-```
+```php
+<?php
 class FooCommand extends BaseCommand
 {
     private $fooService;
@@ -355,7 +364,8 @@ class FooCommand extends BaseCommand
 
 VS
 
-```
+```php
+<?php
 class FooCommand extends BaseCommand
 {
     private $fooService;
@@ -387,7 +397,8 @@ amount of error checking code you need to write as the interpreter will do it fo
 
 Good types help breed understanding of the code for those who come after you, consider:
 
-```
+```php
+<?php
 function sendMessage($to, $subject, $text) {
     $to->addMessage($subject, $text);
 }
@@ -395,7 +406,8 @@ function sendMessage($to, $subject, $text) {
 
 VS
 
-```
+```php
+<?php
 function sendMessage(User $to, string $subject, string $text): void {
     $to->addMessage($subject, $text);
 }
@@ -424,7 +436,8 @@ understand to complete their task the better.
 When you wrote the code, you gained a lot of knowledge about the specific problem you were solving. This
 knowledge is not something that another developer who is working on the code necessarily has. Consider this example
 
-```
+```php
+<?php
 class BankAccount
 {
     public static function create(Validator $validator, string $sortCode, string $accountNumber)
@@ -438,7 +451,8 @@ This is reasonably clear code, but still requires a developer to obtain knowledg
 set one up, even if they are already aware (through domain knowledge) about what a sort code and account number are. We
 could encapsulate this information inside another class, for example a factory class like so:
 
-```
+```php
+<?php
 class BankAccountFactory
 {
     public function __construct($serviceLocator)

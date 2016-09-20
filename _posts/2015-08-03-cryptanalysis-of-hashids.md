@@ -82,7 +82,8 @@ initialisation)
                                       
 The alphabet after initialisation is 'abdegjklmnopqrvwxyzABDEGJKLMNOPQRVWXYZ1234567890' we can then run this code:
 
-```
+```php
+<?php
 $hashids = new Hashids\Hashids('salt');
 $alphabet = '';
 

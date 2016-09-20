@@ -22,7 +22,7 @@ unintended consequences to minor edits popping up in seemingly unrelated areas.
 
 So here are some examples from popular frameworks of what I'm talking about:
 
-```
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -49,7 +49,7 @@ class UserController extends Controller
 Here the code calls a static method on the User model to find a user by it's id; we can assume that this will be loaded
 from some sort of persistent data source which will also accessed statically building a mountain of global state.
 
-```
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -86,7 +86,7 @@ class UserController extends Controller
 This is an improved version of the above example, the two key dependencies have been injected to the controller making it
 explicit which external classes the controller calls upon to perform it's function.
 
-```
+```php
 <?php
 
 namespace Blog\Controller;
@@ -109,7 +109,7 @@ Here is another example of a hidden dependency, this time cleverly disguised ins
 documentation for the above framework now demonstrates proper dependency injection however [it was not always this way](http://framework.zend.com/manual/2.2/en/user-guide/database-and-models.html)
 as such there is a lot of code and developers in the wild which still hide dependencies in service locators.
 
-```
+```php
 <?php
 namespace Blog\Controller;
 
