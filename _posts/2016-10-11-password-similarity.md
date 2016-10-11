@@ -16,7 +16,7 @@ Is it possible to achieve a similar password filter in a secure way?
 
 <!--excerpt-end-->
 
-## Why would it be insecure?
+### Why would it be insecure?
 
 Several of the replies agreed on the fact that any ability to measure similarity would massively reduce the complexity of
 a brute force attack. If that were true there would be no way for a secure system to reject similar passwords. Lets
@@ -48,7 +48,7 @@ attack.
 This seems to imply that such a system would be less secure than a system not employing the similar password
 functionallity.
 
-## Can we improve it?
+### Can we improve it?
 
 The weakness of the above system comes from our function s: it is too fast. If we could slow s down we could bring back
 much of our previous security. How could this be done?
@@ -69,7 +69,7 @@ Provided the size of x(p) is fairly small the likely reduction in security will 
 by a character or two. (We could prove this by defining t(p) to be a function which considers passwords similar if they
 are the same except the last character; t then returns p truncated by 1 char.)
 
-## Is it worth it?
+### Is it worth it?
 
 Probably not. If you saw my unconf talk on passwords at PHP North West you will remember one of my rules being don't
 force your users to change passwords unless they have been compromised.
@@ -77,7 +77,7 @@ force your users to change passwords unless they have been compromised.
 At the point of them changing it you can ask for their previous password and compare the two plain texts don't worry
 too much about any previous passwords you should only really care it's not similar to the compromised one.
 
-## Conclusion
+### Conclusion
 
 All things considered, the trade off in user security here seems to be a bad one, so I would **STRONGLY** recommend
 against implementing the system described above for your users.
