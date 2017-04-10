@@ -101,7 +101,7 @@ requires. To take into account changes in delivery speed over time (eg as your t
 you could use a n-point moving average over a number of weeks/months. You could also break down by area (eg time in 
 development vs time in test) to further refine the estimates. 
 
-A worked example. 
+#### A worked example. 
 
 Consider the following list as the amount of days required to complete the past 40 stories:
 
