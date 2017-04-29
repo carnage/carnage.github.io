@@ -18,6 +18,7 @@ body {
 .sidebar h1 {
     color: #ee4444;
     font-size: 1.3em;
+    margin-top: 10px;
 }
 
 .sidebar a {

@@ -9,6 +9,12 @@
           <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
+    <h1>Upcoming Posts</h1>
+    <ul>
+        {% for post in site.previews limit:5 %}
+        <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
 
 <!--<div class="sidebar well">
