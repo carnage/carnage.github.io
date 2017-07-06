@@ -1,7 +1,7 @@
 # Jekyll configuration
 
-name: My blog
-description:
+name: Carnage's tech talk
+description: Software security and architecture discussions, too big to for 140 chars.
 
 # url is currently only used only for the RSS feed in feed.xml
 url: http://carnage.github.io
