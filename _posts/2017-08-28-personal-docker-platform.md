@@ -43,7 +43,7 @@ So far, I've made good progress on about half of the list, in the remainder of
 this post I will describe the setup of the underlying docker swarm instance and
 of the multi site configuration with automatic SSL.
 
-###Docker setup
+### Docker setup
 
 The initial docker setup is straight forward, I used docker machine to provision 
 a single Digital Ocean droplet (other cloud providers are available) and then 
@@ -65,7 +65,7 @@ front proxy which could direct traffic to the correct docker container based on
 the hostname. My initial attempts at this was a quite complex setup using caddy
 and docker-template however I abandoned this once I discovered Traefik. 
 
-Traefik
+[Traefik](https://traefik.io/)
 is a front proxy written in go which seems to be purpose made for exactly this
 use case. Not only can it interface directly into docker to pick up new containers
 and route to them automatically but it will also handle the SSL certificates 
@@ -177,6 +177,9 @@ this config in the correct place this had the disadvantage of needing to rebuild
 time a config change was needed. My latest strategy now relies upon using the new configs feature
 in docker swarm, this allows you to dynamically mount a config file into an image similar to a 
 volume but without having to worry about putting the file on each host to be able to mount it.
+
+For more detail on all the configuration options, you can read the the
+[traefik documentation](https://docs.traefik.io/configuration/commons/)
 
 To spin it all up I used the following docker compose file with the command
 `docker stack deploy -c docker-compose.yml load_balancer` 
