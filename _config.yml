@@ -39,3 +39,6 @@ collections:
   previews:
     output: true
     permalink: /:collection/:name
+  talks:
+    output: true
+    permalink: /:collection/:name

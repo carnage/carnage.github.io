@@ -1,0 +1,51 @@
+{% include header.html %}
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            {% include sidebar.html %}
+        </div>
+        <div class="col-md-9">
+          <div class="article">
+            <div class="well">
+                <h2><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h2>
+                <div class="post-content">
+                {{ content }}
+                </div>
+                {% if page.slides %}
+                <div id="slides">
+                    <script async class="speakerdeck-embed" data-id="{{ page.slides }}" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+                </div>
+                {% endif %}
+                <br />
+                <h4>Given at</h4>
+                <ul>
+                    {% for given in page.givenAt %}
+                    <li>
+                        {% if given.url %}
+                        <a href="{{given.url}}"><strong>{{ given.location }}</strong></a>
+                        {% else %}
+                        <strong>{{ given.location }}</strong>
+                        {% endif %}
+                        {% if given.date %} {{ given.date | date: "%b %-d, %Y" }}{% endif %}
+                        {% if given.video %} | <a href="{{given.video}}">Video</a> {% endif %}
+                        {% if given.slides %} | <a href="{{given.slides}}">Slides</a> {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+          </div>
+          <div class="pagination">
+              {% if page.next %}
+                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post</a>
+              {% endif %}
+              {% if page.previous %}
+                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">Older Post</a>
+              {% endif %}
+</div>
+
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
