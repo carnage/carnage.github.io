@@ -6,6 +6,8 @@ slides: cbe30b3bb54a44a39fbd9ea743b49cca
 givenAt:
     - location: "PHP Central Europe"
     - location: "PHP North West"
+      url: "https://conference.phpnw.org.uk/phpnw17/speakers/chris-riley/"
+      date: "01-10-2017"
     - location: "PHP Serbia"
     - location: "PHP Minds"
     - location: "PHP NE"

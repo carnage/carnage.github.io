@@ -7,9 +7,15 @@ givenAt:
     - location: "PHP NE"
     - location: "Leeds PHP"
     - location: "PHP Day"
+      url: "http://2016.phpday.it/talk/you-attended-talk-an-introduction-to-event-sourcing/"
+      date: "13-05-2016"
+      video: "https://vimeo.com/176057942"
       slides: https://speakerdeck.com/carnage/you-attended-talk-an-introduction-to-event-sourcing-short
     - location: "PHP North West"
+      date: "03-10-2015"
+      url: "https://conference.phpnw.org.uk/phpnw15/speakers/chris-riley/"
       slides: https://speakerdeck.com/carnage/you-attended-talk-an-introduction-to-event-sourcing
+      video: "https://www.youtube.com/watch?v=juWTeRq0A3I"
 ---
 
 Imagine for a moment you work for a large online retailer specialising in household goods. One morning, the head of marketing comes to you and says "I've had this great idea we're going to send discount vouchers to anyone who's changed their address in the past 3 months; people who've recently moved are more likely to be buying new furniture. Could you retrieve a list of all these customers?" You explain to him your systems only store a customers current address and doesn't record when it was last changed, a new feature is added to the backlog and the head of marketing leaves a little disappointed. 

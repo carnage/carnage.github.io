@@ -6,6 +6,8 @@ slides: "bf9101e4b37944b39e035a1b306f8261"
 givenAt:
     - location: "PHP Leeds"
     - location: "PHP North West"
+      url: "https://conference.phpnw.org.uk/phpnw17/speakers/chris-riley/"
+      date: "30-09-2017"
     - location: "Dutch PHP Conference"
       slides: "https://speakerdeck.com/carnage/nuclear-powered-software-securty"
 ---
