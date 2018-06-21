@@ -5,6 +5,7 @@ comments: false
 givenAt:
     - location: "PHP UK"
       date: "16-02-2018"
+      video: "https://www.youtube.com/watch?v=gU0mAPywm7o"
     - location: "AUFP Forum PHP Paris"
       url: "https://event.afup.org/en/forumphp2017/speakers/#1698"
       video: "https://youtu.be/dTrAfGbNuqk"
