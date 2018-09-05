@@ -24,7 +24,7 @@ don't have pre-selected speakers, but on the whole, this holds true.
 I'll illustrate this answer with the first reason conferences give for not covering
 expenses.
 
-#### Do it for exposure
+### Do it for exposure
 
 The first reason conferences often give is that speakers will benefit from exposure
 of being on stage and get employment opportunities from it. This may work out well 
@@ -45,7 +45,7 @@ ignores the fact that a conference cannot happen without it's speakers. A confer
 especially a for profit one which expects speakers to, not just do work for free but
 to actually bear out of pocket costs for it is really not acceptable.
 
-#### We're not paying ourselves/our helpers
+### We're not paying ourselves/our helpers
 
 This comes up a fair amount, conferences aren't paying expenses for the helpers who
 help organise the event so, they don't have to pay speakers expenses either. To my
@@ -64,7 +64,7 @@ ensure they are not out of pocket. The bonus with helpers is that they usually
 live locally, which reduces any travel or accommodation costs they may have so
 there is really no excuse for not covering them.
 
-#### Do it to give something back
+### Do it to give something back
 
 This one really only works when used by a not for profit event; the idea that people
 should volunteer their time and money to help out others is a nobel one, however it
@@ -83,7 +83,7 @@ for your event and you will have good content, but if you want truly great conte
 you have to look beyond the regulars and bring in speakers from different backgrounds,
 not all of whom are in the position to cover their own costs.  
   
-#### We can't afford it
+### We can't afford it
 
 I've saved this reason till last as it is probably the most common reason. A lot of
 events, especially the not for profit ones, don't believe they can afford to pay for
@@ -118,7 +118,7 @@ sold for £108. Although it's not quite as cheap as some events, it still falls 
 a very affordable bracket, even for developers who aren't lucky enough to have their
 employers buy their ticket.
 
-#### Conclusion
+### Conclusion
 
 Pay your speakers' costs.
 
