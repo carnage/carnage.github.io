@@ -67,7 +67,7 @@ there is really no excuse for not covering them.
 ### Do it to give something back
 
 This one really only works when used by a not for profit event; the idea that people
-should volunteer their time and money to help out others is a nobel one, however it
+should volunteer their time and money to help out others is a noble  one, however it
 is not without it's own significant downsides. From a speakers perspective, this is 
 only something I'm willing to do on a limited basis, usually for local events such 
 as user groups. I'm not going to pay to fly to another country, plus a hotel for 
@@ -89,7 +89,7 @@ I've saved this reason till last as it is probably the most common reason. A lot
 events, especially the not for profit ones, don't believe they can afford to pay for
 speaker expenses (if you are a for profit conference using this reason, your conference
 seriously lacks a viable business model). The general logic behind this is that they
-want to keep the ticket prices low to make them "affordable", again a nobel aim but
+want to keep the ticket prices low to make them "affordable", again a noble  aim but
 see previous section.
 
 Part of the reason this comes up is because the conference leaves thinking about 
