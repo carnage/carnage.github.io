@@ -7,6 +7,9 @@ givenAt:
     - location: "Dutch PHP Conference"
       date: "08-06-2018"
       slides: c51ecebbdecb427f8ca3ae7ffc4b8989
+    - location: "PHP Leeds"
+    - location: "PHP CE"
+      date: "27-10-2018"
       
 ---
 

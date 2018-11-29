@@ -4,6 +4,9 @@ title: "Nuclear powered software security"
 comments: false
 slides: "bf9101e4b37944b39e035a1b306f8261"
 givenAt:
+    - location: "PHP CE"
+      date: "27-10-2018"
+    - location: "PHP Sheffield"
     - location: "PHP Leeds"
     - location: "PHP North West"
       url: "https://conference.phpnw.org.uk/phpnw17/speakers/chris-riley/"
