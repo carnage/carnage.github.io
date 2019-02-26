@@ -4,6 +4,9 @@ title: "Nuclear powered software security"
 comments: false
 slides: "bf9101e4b37944b39e035a1b306f8261"
 givenAt:
+    - location: "PHP Benelux"
+      date: "26-01-2019"
+      url: "https://conference.phpbenelux.eu/2019/sessions/nuclear-powered-software-security/"
     - location: "PHP CE"
       date: "27-10-2018"
     - location: "PHP Sheffield"
