@@ -4,6 +4,8 @@ title: "Microservices vs The Distributed Monolith"
 comments: false
 slides: cbe30b3bb54a44a39fbd9ea743b49cca
 givenAt:
+    - location: "Dutch PHP Conference"
+      video: "https://www.youtube.com/watch?v=P9L8AtV79cM"
     - location: "PHP Central Europe"
       video: "https://www.youtube.com/watch?v=n8CXcUHAg08"
     - location: "PHP North West"
