@@ -108,3 +108,7 @@ to directories, it then loops through them and creates a set of docker volume mo
 to separately mount each symlinked directory in the vendor directory as a separate volume
 in the container, overriding the symlink in the container's filesystem with a mount containing
 the files.
+
+That forms the basis of my setup for local development work and should get you most of the
+way to solving these problems for yourself; a word of warning however, these scripts were
+developed in a linux environment and may fail horribly on mac or windows.
