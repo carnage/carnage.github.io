@@ -149,7 +149,7 @@ This snippet of shell script first defines the image tag by using git tags and c
 followed by the nginx container and pushes both to your registry. This is part of a build pipeline, but you could run
 this locally. 
 
-```shell script
+```sh
     export CI_REGISTRY_IMAGE="<your docker repository>"
     export IMAGE_VERSION=$(git describe --tags)
     docker build -t $CI_REGISTRY_IMAGE"/php:"$IMAGE_VERSION .
